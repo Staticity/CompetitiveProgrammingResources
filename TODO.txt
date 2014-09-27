@@ -1,0 +1,23 @@
+have:
+fast dijkstra (tested, used in real problem)
+disjoint set (tested)
+segment tree (tested)
+segment tree with updates (tested)
+max flow - ford fulkerson (tested, used in real problem)
+
+still need:
+prims
+kruskals (w/ above disjoint set)
+hungarian algorithm
+suffix stuff
+
+any math stuff? computational geometry, etc..
+
+RMQ (not segment tree)
+
+fenwick tree/BIT
+
+trie?
+
+anything else?
+

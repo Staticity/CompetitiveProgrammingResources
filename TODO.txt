@@ -1,13 +1,14 @@
 have:
 fast dijkstra (tested, used in real problem)
-disjoint set (tested)
+disjoint set (tested, tested by proxy w/ kruskals)
 segment tree (tested)
 segment tree with updates (tested)
 max flow - ford fulkerson (tested, used in real problem)
+topo sort - (tested, need to test on ordering tasks)
+prims - (tested, tested on real problem)
+kruskals - (tested, tested on real problem)
 
 still need:
-prims
-kruskals (w/ above disjoint set)
 hungarian algorithm
 suffix stuff
 

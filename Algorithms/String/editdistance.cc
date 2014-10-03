@@ -29,7 +29,7 @@ int editDistance(string a, string b)
 			int x = dist[i - 1][j] + 1;
 			int y = dist[i][j - 1] + 1;
 
-			// a[i - 1] and b[i - 1] because we're 1-indexing
+			// a[i - 1] and b[j - 1] because we're 1-indexing
 			int z = dist[i - 1][j - 1] + ((a[i - 1] == b[j - 1]) ? 0 : 1);
 
 			dist[i][j] = min(x, min(y, z));

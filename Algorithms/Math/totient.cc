@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 #define MAX 100000
 
@@ -28,8 +29,8 @@ void store()
 // gets unique prime factors
 void getPrimeFactors(int n, vector<int>& primes)
 {
-	int index = 0;
-	while (n > 0)
+	int index = -1;
+	while (n > 1)
 	{
 		int prime = divs[n];
 
@@ -52,9 +53,10 @@ int totient(int n)
 	getPrimeFactors(n, primes);
 
 	int coprimes = n;
-	
+
 	for (int i = 0; i < primes.size(); ++i)
 	{
+		cout << primes[i] << endl;
 		coprimes -= coprimes / primes[i];
 	}
 
@@ -64,6 +66,5 @@ int totient(int n)
 int main()
 {
 	store();
-
-
+	cout << totient(36) << endl;
 }

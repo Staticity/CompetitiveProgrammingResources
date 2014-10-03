@@ -1,13 +1,17 @@
-#include <cstdio>
+#include <iostream>
 #include <algorithm>
 #include <cstring>
+#include <string>
 
 #define REP(i, n) for (int i = 0; i < (int)(n); ++i)
 
+using namespace std;
+
 const int MAXN = 1 << 21;
-char * S;
+string S;
 int N, gap;
 int sa[MAXN], pos[MAXN], tmp[MAXN], lcp[MAXN];
+
 bool sufCmp(int i, int j)
 {
 	if (pos[i] != pos[j])
@@ -18,7 +22,7 @@ bool sufCmp(int i, int j)
 }
 void buildSA()
 {
-	N = strlen(S);
+	N = S.size();
 	REP(i, N) sa[i] = i, pos[i] = S[i];
 	for (gap = 1;; gap *= 2)
 	{
@@ -42,7 +46,19 @@ void buildLCP()
 int main() {
 	S = "ababccbbcc";
 	buildSA();
-	for (int i = 0; i < 10; i++) {
-		
-	}	
+	buildLCP();
+	for (int i = 0; i < S.size(); ++i) {
+		int start = sa[i];
+		for (int j = start; j < S.size(); ++j)
+		{
+			cout << S[j];
+		}
+		cout << endl;
+	}
+	cout << endl;
+
+	for (int i = 0; i < S.size(); ++i)
+	{
+		cout << lcp[i] << endl;
+	}
 }

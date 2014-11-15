@@ -44,7 +44,7 @@ int main()
 		int index = 0;
 		inorderTraversal(0, index);
 
-		int lisSize = 0;
+		int lisSize = 1;
 		int lis[index];
 		fill(lis, lis + index, 1);
 
@@ -60,6 +60,8 @@ int main()
 
 			lisSize = max(lisSize, lis[i]);
 		}
+
+		cout << lisSize << " " << changes << " " << index << endl;
 
 		if (lisSize + changes >= index)
 		{

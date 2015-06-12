@@ -1,8 +1,5 @@
 import java.util.*;
 
-
-// simple - no updating, just serves queries over an array
-// to change from 
 public class UpdateSegmentTree {
 	int[] contents;
 	int[] lazy;
